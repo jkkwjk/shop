@@ -1,0 +1,14 @@
+server:
+  port: 9090
+spring:
+  datasource:
+    url: jdbc:sqlite::resource:static/data.sqlite
+    driver-class-name: org.sqlite.JDBC
+  jpa:
+    hibernate:
+      ddl-auto: update
+      naming:
+#        physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl #²»±ê×¼
+    database-platform: com.jkk.service.address.core.sqlite.SQLiteDialect
+    show-sql: true

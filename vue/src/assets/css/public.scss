@@ -1,0 +1,35 @@
+@import "bilibili-ico";
+a{
+  color: white;
+  text-decoration: none;
+  &:hover{
+    color: white;
+    text-decoration: none;
+  }
+  &:focus{
+    color: white;
+    text-decoration: none;
+  }
+}
+html,body{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  user-select: none;// FIXME 背景色
+}
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  background-color: #ffffff;
+}
+::-webkit-scrollbar-thumb {
+  border-radius:5px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .2);
+  background-color: rgba(0, 0, 0, .1)
+}
+
+#app{
+  width: 100%;
+  font: 14px -apple-system,BlinkMacSystemFont,Helvetica Neue,Helvetica,Arial,PingFang SC,Hiragino Sans GB,Microsoft YaHei,sans-serif;
+}

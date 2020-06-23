@@ -1,0 +1,51 @@
+spring:
+  profiles:
+    include: db
+  devtools:
+    restart:
+      enabled: false
+      additional-paths: src/main/java
+  servlet:
+    multipart:
+      max-file-size: 2MB
+      max-request-size: 2MB
+  jpa:
+    hibernate:
+      ddl-auto: update
+      naming:
+        physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    show-sql: true
+
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+  redis:
+    database: 1
+    host: 
+    password: 
+    timeout: 5000
+    jedis:
+      pool:
+        max-wait: 5000
+        max-active: 50
+        min-idle: 1
+        max-idle: 50
+
+
+server:
+  port: 8080
+  servlet:
+    context-path: /api
+#mybatis:
+#  mapper-locations: classpath:mapping/*.xml
+
+
+
+logging:
+  level:
+    root: info
+    com.jkk.leave.mapper: debug
+#    org.hibernate.engine.QueryParameters: debug
+#    org.hibernate.engine.query.HQLQueryPlan: debug
+#    org.hibernate.type.descriptor.sql.BasicBinder: trace
